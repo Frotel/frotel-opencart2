@@ -12,6 +12,8 @@ class ModelPaymentFrotel extends Model
         if(!isset($this->session->data['shipping_method']))
             return false;
 
+        if (strpos($this->session->data['shipping_method']['code'],'frotel_shipping') === false)
+            return false;
 
         $this->load->language('payment/frotel');
 
