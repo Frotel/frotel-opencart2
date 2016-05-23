@@ -7,7 +7,7 @@
 	<link>https://github.com/Reza1607</link>
 	<file path="system/library/session.php">
 		<operation>
-			<search><![CDATA[$this->data =& $_SESSION;]]></search>
+			<search><![CDATA[$this->data =& $_SESSION[$key];]]></search>
 			<add position="after"><![CDATA[
                 if (isset($_GET['bz']) && intval($_GET['bz'])>0) {
                 	$_SESSION['frotel_bz'] = intval($_GET['bz']);
