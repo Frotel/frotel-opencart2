@@ -10,11 +10,11 @@
 			<search><![CDATA[$this->data =& $_SESSION[$key];]]></search>
 			<add position="after"><![CDATA[
                 if (isset($_GET['bz']) && intval($_GET['bz'])>0) {
-                	$_SESSION['frotel_bz'] = intval($_GET['bz']);
+                	$_SESSION[$key]['frotel_bz'] = intval($_GET['bz']);
                 } elseif (isset($_GET['wid']) && intval($_GET['wid'])>0) {
-					$_SESSION['frotel_bz'] = intval($_GET['wid']);
+					$_SESSION[$key]['frotel_bz'] = intval($_GET['wid']);
 				} elseif (isset($_GET['moaref']) && intval($_GET['moaref'])>0) {
-					$_SESSION['frotel_bz'] = intval($_GET['moaref']);
+					$_SESSION[$key]['frotel_bz'] = intval($_GET['moaref']);
 				}
             ]]></add>
 		</operation>
