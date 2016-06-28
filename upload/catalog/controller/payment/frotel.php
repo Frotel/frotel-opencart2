@@ -163,6 +163,8 @@ class ControllerPaymentFrotel extends Controller
 
         $this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('frotel_order_status'), '', true);
         $this->session->data['frotel_shipping_default'] = null;
+        $this->session->data['province_id'] = null;
+        $this->session->data['city_id'] = null;
         echo (json_encode(array(
             'error'=>0,
             'url'=>$url
